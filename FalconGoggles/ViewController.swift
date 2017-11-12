@@ -23,6 +23,7 @@ class ViewController: UIViewController {
 
     func deleteme() {
         print("delete me once we get GitHub figured out")
+        print("test test")
     }
     
 
