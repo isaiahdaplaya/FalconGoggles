@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC46E9551FB905FC00449B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46E9541FB905FC00449B14 /* AppDelegate.swift */; };
+		FC46E9571FB905FC00449B14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46E9561FB905FC00449B14 /* ViewController.swift */; };
+		FC46E95A1FB905FC00449B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC46E9581FB905FC00449B14 /* Main.storyboard */; };
+		FC46E95C1FB905FC00449B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC46E95B1FB905FC00449B14 /* Assets.xcassets */; };
+		FC46E95F1FB905FC00449B14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC46E95D1FB905FC00449B14 /* LaunchScreen.storyboard */; };
+		FC46E96A1FB905FC00449B14 /* FalconGogglesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46E9691FB905FC00449B14 /* FalconGogglesTests.swift */; };
+		FC46E9751FB905FC00449B14 /* FalconGogglesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46E9741FB905FC00449B14 /* FalconGogglesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC46E9661FB905FC00449B14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC46E9491FB905FC00449B14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC46E9501FB905FC00449B14;
+			remoteInfo = FalconGoggles;
+		};
+		FC46E9711FB905FC00449B14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC46E9491FB905FC00449B14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC46E9501FB905FC00449B14;
+			remoteInfo = FalconGoggles;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC46E9511FB905FC00449B14 /* FalconGoggles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FalconGoggles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC46E9541FB905FC00449B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC46E9561FB905FC00449B14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC46E9591FB905FC00449B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC46E95B1FB905FC00449B14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC46E95E1FB905FC00449B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC46E9601FB905FC00449B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC46E9651FB905FC00449B14 /* FalconGogglesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FalconGogglesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC46E9691FB905FC00449B14 /* FalconGogglesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconGogglesTests.swift; sourceTree = "<group>"; };
+		FC46E96B1FB905FC00449B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC46E9701FB905FC00449B14 /* FalconGogglesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FalconGogglesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC46E9741FB905FC00449B14 /* FalconGogglesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconGogglesUITests.swift; sourceTree = "<group>"; };
+		FC46E9761FB905FC00449B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC46E94E1FB905FC00449B14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC46E9621FB905FC00449B14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC46E96D1FB905FC00449B14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC46E9481FB905FC00449B14 = {
+			isa = PBXGroup;
+			children = (
+				FC46E9531FB905FC00449B14 /* FalconGoggles */,
+				FC46E9681FB905FC00449B14 /* FalconGogglesTests */,
+				FC46E9731FB905FC00449B14 /* FalconGogglesUITests */,
+				FC46E9521FB905FC00449B14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC46E9521FB905FC00449B14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC46E9511FB905FC00449B14 /* FalconGoggles.app */,
+				FC46E9651FB905FC00449B14 /* FalconGogglesTests.xctest */,
+				FC46E9701FB905FC00449B14 /* FalconGogglesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC46E9531FB905FC00449B14 /* FalconGoggles */ = {
+			isa = PBXGroup;
+			children = (
+				FC46E9541FB905FC00449B14 /* AppDelegate.swift */,
+				FC46E9561FB905FC00449B14 /* ViewController.swift */,
+				FC46E9581FB905FC00449B14 /* Main.storyboard */,
+				FC46E95B1FB905FC00449B14 /* Assets.xcassets */,
+				FC46E95D1FB905FC00449B14 /* LaunchScreen.storyboard */,
+				FC46E9601FB905FC00449B14 /* Info.plist */,
+			);
+			path = FalconGoggles;
+			sourceTree = "<group>";
+		};
+		FC46E9681FB905FC00449B14 /* FalconGogglesTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC46E9691FB905FC00449B14 /* FalconGogglesTests.swift */,
+				FC46E96B1FB905FC00449B14 /* Info.plist */,
+			);
+			path = FalconGogglesTests;
+			sourceTree = "<group>";
+		};
+		FC46E9731FB905FC00449B14 /* FalconGogglesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC46E9741FB905FC00449B14 /* FalconGogglesUITests.swift */,
+				FC46E9761FB905FC00449B14 /* Info.plist */,
+			);
+			path = FalconGogglesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC46E9501FB905FC00449B14 /* FalconGoggles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC46E9791FB905FC00449B14 /* Build configuration list for PBXNativeTarget "FalconGoggles" */;
+			buildPhases = (
+				FC46E94D1FB905FC00449B14 /* Sources */,
+				FC46E94E1FB905FC00449B14 /* Frameworks */,
+				FC46E94F1FB905FC00449B14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FalconGoggles;
+			productName = FalconGoggles;
+			productReference = FC46E9511FB905FC00449B14 /* FalconGoggles.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC46E9641FB905FC00449B14 /* FalconGogglesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC46E97C1FB905FC00449B14 /* Build configuration list for PBXNativeTarget "FalconGogglesTests" */;
+			buildPhases = (
+				FC46E9611FB905FC00449B14 /* Sources */,
+				FC46E9621FB905FC00449B14 /* Frameworks */,
+				FC46E9631FB905FC00449B14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC46E9671FB905FC00449B14 /* PBXTargetDependency */,
+			);
+			name = FalconGogglesTests;
+			productName = FalconGogglesTests;
+			productReference = FC46E9651FB905FC00449B14 /* FalconGogglesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC46E96F1FB905FC00449B14 /* FalconGogglesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC46E97F1FB905FC00449B14 /* Build configuration list for PBXNativeTarget "FalconGogglesUITests" */;
+			buildPhases = (
+				FC46E96C1FB905FC00449B14 /* Sources */,
+				FC46E96D1FB905FC00449B14 /* Frameworks */,
+				FC46E96E1FB905FC00449B14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC46E9721FB905FC00449B14 /* PBXTargetDependency */,
+			);
+			name = FalconGogglesUITests;
+			productName = FalconGogglesUITests;
+			productReference = FC46E9701FB905FC00449B14 /* FalconGogglesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC46E9491FB905FC00449B14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Isaiah Butcher";
+				TargetAttributes = {
+					FC46E9501FB905FC00449B14 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					FC46E9641FB905FC00449B14 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FC46E9501FB905FC00449B14;
+					};
+					FC46E96F1FB905FC00449B14 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FC46E9501FB905FC00449B14;
+					};
+				};
+			};
+			buildConfigurationList = FC46E94C1FB905FC00449B14 /* Build configuration list for PBXProject "FalconGoggles" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC46E9481FB905FC00449B14;
+			productRefGroup = FC46E9521FB905FC00449B14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC46E9501FB905FC00449B14 /* FalconGoggles */,
+				FC46E9641FB905FC00449B14 /* FalconGogglesTests */,
+				FC46E96F1FB905FC00449B14 /* FalconGogglesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC46E94F1FB905FC00449B14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC46E95F1FB905FC00449B14 /* LaunchScreen.storyboard in Resources */,
+				FC46E95C1FB905FC00449B14 /* Assets.xcassets in Resources */,
+				FC46E95A1FB905FC00449B14 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC46E9631FB905FC00449B14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC46E96E1FB905FC00449B14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC46E94D1FB905FC00449B14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC46E9571FB905FC00449B14 /* ViewController.swift in Sources */,
+				FC46E9551FB905FC00449B14 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC46E9611FB905FC00449B14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC46E96A1FB905FC00449B14 /* FalconGogglesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC46E96C1FB905FC00449B14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC46E9751FB905FC00449B14 /* FalconGogglesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC46E9671FB905FC00449B14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC46E9501FB905FC00449B14 /* FalconGoggles */;
+			targetProxy = FC46E9661FB905FC00449B14 /* PBXContainerItemProxy */;
+		};
+		FC46E9721FB905FC00449B14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC46E9501FB905FC00449B14 /* FalconGoggles */;
+			targetProxy = FC46E9711FB905FC00449B14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC46E9581FB905FC00449B14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC46E9591FB905FC00449B14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC46E95D1FB905FC00449B14 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC46E95E1FB905FC00449B14 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC46E9771FB905FC00449B14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC46E9781FB905FC00449B14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC46E97A1FB905FC00449B14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FalconGoggles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cs385.FalconGoggles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC46E97B1FB905FC00449B14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FalconGoggles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cs385.FalconGoggles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC46E97D1FB905FC00449B14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FalconGogglesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cs385.FalconGogglesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FalconGoggles.app/FalconGoggles";
+			};
+			name = Debug;
+		};
+		FC46E97E1FB905FC00449B14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FalconGogglesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cs385.FalconGogglesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FalconGoggles.app/FalconGoggles";
+			};
+			name = Release;
+		};
+		FC46E9801FB905FC00449B14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FalconGogglesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cs385.FalconGogglesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FalconGoggles;
+			};
+			name = Debug;
+		};
+		FC46E9811FB905FC00449B14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FalconGogglesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cs385.FalconGogglesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FalconGoggles;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC46E94C1FB905FC00449B14 /* Build configuration list for PBXProject "FalconGoggles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC46E9771FB905FC00449B14 /* Debug */,
+				FC46E9781FB905FC00449B14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC46E9791FB905FC00449B14 /* Build configuration list for PBXNativeTarget "FalconGoggles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC46E97A1FB905FC00449B14 /* Debug */,
+				FC46E97B1FB905FC00449B14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC46E97C1FB905FC00449B14 /* Build configuration list for PBXNativeTarget "FalconGogglesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC46E97D1FB905FC00449B14 /* Debug */,
+				FC46E97E1FB905FC00449B14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC46E97F1FB905FC00449B14 /* Build configuration list for PBXNativeTarget "FalconGogglesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC46E9801FB905FC00449B14 /* Debug */,
+				FC46E9811FB905FC00449B14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC46E9491FB905FC00449B14 /* Project object */;
+}
