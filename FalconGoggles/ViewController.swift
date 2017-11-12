@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        deleteme()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +21,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func deleteme() {
+        print("delete me once we get GitHub figured out")
+    }
+    
 
 }
 
