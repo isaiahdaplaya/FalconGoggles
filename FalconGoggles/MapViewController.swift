@@ -68,7 +68,7 @@ extension MapViewController: MKMapViewDelegate{
                 view.calloutOffset = CGPoint(x: -5, y: 5)
                 let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero,
                                                         size: CGSize(width: 30, height: 30)))
-                mapsButton.setBackgroundImage(UIImage(named: "Maps-icon"), for: UIControlState())
+                mapsButton.setBackgroundImage(UIImage(named: "icons8-globe"), for: UIControlState())
                 view.rightCalloutAccessoryView = mapsButton
             }
             return view
