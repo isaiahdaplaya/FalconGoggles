@@ -6,7 +6,6 @@
 //  Copyright © 2017 Isaiah Butcher. All rights reserved.
 //
 
-import Foundation
 import MapKit
 import Contacts
 
