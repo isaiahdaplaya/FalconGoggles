@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E80104BB1FBA86EC0072B40A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80104BA1FBA86EC0072B40A /* MapViewController.swift */; };
+		E82B41E01FBA8BDF006375BE /* Monument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B41DF1FBA8BDF006375BE /* Monument.swift */; };
 		FC46E9551FB905FC00449B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46E9541FB905FC00449B14 /* AppDelegate.swift */; };
 		FC46E9571FB905FC00449B14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46E9561FB905FC00449B14 /* ViewController.swift */; };
 		FC46E95A1FB905FC00449B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC46E9581FB905FC00449B14 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		E80104BA1FBA86EC0072B40A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E82B41DF1FBA8BDF006375BE /* Monument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monument.swift; sourceTree = "<group>"; };
 		FC46E9511FB905FC00449B14 /* FalconGoggles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FalconGoggles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC46E9541FB905FC00449B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC46E9561FB905FC00449B14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				FC46E9541FB905FC00449B14 /* AppDelegate.swift */,
 				FC46E9561FB905FC00449B14 /* ViewController.swift */,
 				FC46E9581FB905FC00449B14 /* Main.storyboard */,
+				E82B41DF1FBA8BDF006375BE /* Monument.swift */,
 				E80104BA1FBA86EC0072B40A /* MapViewController.swift */,
 				FC46E95B1FB905FC00449B14 /* Assets.xcassets */,
 				FC46E95D1FB905FC00449B14 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82B41E01FBA8BDF006375BE /* Monument.swift in Sources */,
 				FC46E9571FB905FC00449B14 /* ViewController.swift in Sources */,
 				E80104BB1FBA86EC0072B40A /* MapViewController.swift in Sources */,
 				FC46E9551FB905FC00449B14 /* AppDelegate.swift in Sources */,
