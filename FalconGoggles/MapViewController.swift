@@ -8,15 +8,17 @@
 
 import UIKit
 import MapKit
+import CoreMotion
 
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var motionManager : CMMotionManager!
     
     let initialLocation = CLLocation(latitude:39.008493, longitude: -104.888742)
     
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 500
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,12 @@ class MapViewController: UIViewController {
         centerMapOnLocation(location: initialLocation)
         changeMapType()
         // Do any additional setup after loading the view.
+        
+        let f16 = Monument(title: "F-16 Fightin' Falcon", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.009103, longitude: -104.889707))
+        mapView.addAnnotation(f16)
+        
+        motionManager = CMMotionManager()
+//        motionManager.start
     }
 
     override func didReceiveMemoryWarning() {
