@@ -28,9 +28,8 @@ class MapViewController: UIViewController {
         changeMapType()
         // Do any additional setup after loading the view.
         
-        let f16 = Monument(title: "F-16 Fightin' Falcon", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.009103, longitude: -104.889707))
-        mapView.addAnnotation(f16)
-        
+        let allMonuments = loadAllMonuments()
+        mapView.addAnnotations(allMonuments)
     }
 
     override func didReceiveMemoryWarning() {
