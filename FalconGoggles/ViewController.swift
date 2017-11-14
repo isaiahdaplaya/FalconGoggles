@@ -13,12 +13,14 @@ import UIKit
 class ViewController: UIViewController {
     
     var motionManager : CMMotionManager!
-    
+    var location : CLLocation!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         motionManager = CMMotionManager()
-    
+        location = CLLocation()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
