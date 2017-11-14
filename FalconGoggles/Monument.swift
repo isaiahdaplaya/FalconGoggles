@@ -8,6 +8,7 @@
 
 import Foundation
 import MapKit
+import Contacts
 
 class Monument: NSObject, MKAnnotation{
     let title: String?
@@ -26,5 +27,13 @@ class Monument: NSObject, MKAnnotation{
     
     var subtitle: String?{
         return locationName
+    }
+    
+    func mapItem() -> MKMapItem{
+        let addressDict = [CNPostalAddressStreetKey: subtitle!]
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        return mapItem
     }
 }
