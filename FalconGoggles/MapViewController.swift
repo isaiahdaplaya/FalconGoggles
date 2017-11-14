@@ -20,6 +20,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        centerMapOnLocation(location: initialLocation)
         changeMapType()
         // Do any additional setup after loading the view.
     }
