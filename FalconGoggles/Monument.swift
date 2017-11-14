@@ -28,7 +28,7 @@ class Monument: NSObject, MKAnnotation{
         return locationName
     }
     
-    func mapItem() -> MKMapItem{
+    func mapItem() -> MKMapItem {
         let addressDict = [CNPostalAddressStreetKey: subtitle!]
         let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict)
         let mapItem = MKMapItem(placemark: placemark)
