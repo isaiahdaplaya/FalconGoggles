@@ -69,4 +69,10 @@ extension MapViewController: MKMapViewDelegate{
         }
         return view
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let location = view.annotation as! Monument
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+        location.mapItem().openInMaps(launchOptions: launchOptions)
+    }
 }
