@@ -6,13 +6,19 @@
 //  Copyright © 2017 Isaiah Butcher. All rights reserved.
 //
 
+import CoreMotion
+import CoreLocation
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var motionManager : CMMotionManager!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        deleteme()
+        motionManager = CMMotionManager()
+    
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -21,10 +27,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func deleteme() {
-        print("delete me once we get GitHub figured out")
-        print("test test")
-    }
+    
     
 
 }
