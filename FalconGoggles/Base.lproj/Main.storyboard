@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dPS-XD-yGE">
-                                <rect key="frame" x="123" y="313" width="128" height="41"/>
+                                <rect key="frame" x="124" y="49" width="128" height="40.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H31-06-HOa">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="20.5"/>
@@ -77,23 +77,33 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbp-uH-Y1R">
-                                        <rect key="frame" x="0.0" y="20.5" width="128" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="128" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="H31-06-HOa" secondAttribute="bottom" constant="20" symbolic="YES" id="BYw-zJ-QkW"/>
+                                    <constraint firstItem="H31-06-HOa" firstAttribute="top" secondItem="dPS-XD-yGE" secondAttribute="top" id="jCX-89-oYz"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brng to F16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-Iv-LJf">
-                                <rect key="frame" x="123" y="409" width="129" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brng to F16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-Iv-LJf">
+                                <rect key="frame" x="125" y="113" width="127" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnO-J1-xKR">
-                                <rect key="frame" x="73" y="438" width="228" height="99"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnO-J1-xKR">
+                                <rect key="frame" x="74" y="142" width="228" height="99"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGO-qi-jHq">
+                                <rect key="frame" x="0.0" y="544" width="375" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,14 +111,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dPS-XD-yGE" firstAttribute="centerY" secondItem="Txk-SC-pLv" secondAttribute="centerY" id="Nfa-yn-exE"/>
+                            <constraint firstItem="Ogc-Iv-LJf" firstAttribute="centerX" secondItem="KnO-J1-xKR" secondAttribute="centerX" id="1Bo-6X-PEb"/>
+                            <constraint firstItem="Ogc-Iv-LJf" firstAttribute="top" secondItem="dPS-XD-yGE" secondAttribute="bottom" constant="23.5" id="8x9-e9-X6h"/>
+                            <constraint firstItem="dPS-XD-yGE" firstAttribute="trailing" secondItem="Ogc-Iv-LJf" secondAttribute="trailing" id="HN3-XR-PVQ"/>
+                            <constraint firstItem="KnO-J1-xKR" firstAttribute="top" secondItem="Ogc-Iv-LJf" secondAttribute="bottom" constant="8" symbolic="YES" id="J9a-oQ-gQL"/>
+                            <constraint firstItem="dPS-XD-yGE" firstAttribute="top" secondItem="WRP-r5-Xa3" secondAttribute="top" constant="29" id="Jru-4w-2As"/>
+                            <constraint firstItem="dPS-XD-yGE" firstAttribute="centerX" secondItem="Ogc-Iv-LJf" secondAttribute="centerX" id="NfC-Th-37U"/>
+                            <constraint firstItem="dPS-XD-yGE" firstAttribute="centerX" secondItem="Txk-SC-pLv" secondAttribute="centerX" id="aFe-gP-Whe"/>
                             <constraint firstItem="dPS-XD-yGE" firstAttribute="centerX" secondItem="Txk-SC-pLv" secondAttribute="centerX" id="bVw-Ey-rbv"/>
+                            <constraint firstItem="dPS-XD-yGE" firstAttribute="top" secondItem="WRP-r5-Xa3" secondAttribute="top" constant="29" id="qPB-tV-cfQ"/>
+                            <constraint firstItem="Ogc-Iv-LJf" firstAttribute="top" secondItem="dPS-XD-yGE" secondAttribute="bottom" constant="23" id="uTD-Tn-RHg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WRP-r5-Xa3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Goggles" id="0YY-q0-VOd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="DescriptionLabel" destination="dGO-qi-jHq" id="t1s-zM-wAg"/>
                         <outlet property="brngLabel" destination="KnO-J1-xKR" id="adA-Vy-MQZ"/>
                         <outlet property="locationLabel" destination="sbp-uH-Y1R" id="fHt-Ef-Dqo"/>
                     </connections>

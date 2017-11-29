@@ -15,7 +15,8 @@ import Foundation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
-
+    @IBOutlet weak var DescriptionLabel: UILabel!
+    
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var brngLabel: UILabel!
     
@@ -23,16 +24,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var location : CLLocation!
     
+    var bearingToF16: Double = 0.0
+    
+    let buffer: Double = 5
+    
     let monuments = Monument.loadAllMonuments()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        DescriptionLabel.isHidden = true
         motionManager = CMMotionManager()
         locationManager.requestAlwaysAuthorization()
         if CLLocationManager.locationServicesEnabled(){
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
+            locationManager.startUpdatingHeading()
         }
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,10 +51,38 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            locationLabel.text = "\(String(location.coordinate.latitude)), \(String(location.coordinate.longitude))"
+        if let myLocation = locations.first {
+            locationLabel.text = "\(String(myLocation.coordinate.latitude)), \(String(myLocation.coordinate.longitude))"
+            
+            location=myLocation
             
             brngLabel.text = "\(headingToLocation(myLoc: location, monumentLoc: monuments[0].coordinate ))"
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        
+        DescriptionLabel.text = String(newHeading.trueHeading)
+        
+        for monument in monuments{
+            
+            
+            
+            guard let location = location else {return}
+            
+            let bearingToMonument = headingToLocation(myLoc: location, monumentLoc: monument.coordinate)
+            
+            let myBearing = newHeading.magneticHeading
+            
+            print(newHeading.trueHeading)
+            
+            if(myBearing <= bearingToMonument + 5 && myBearing >= bearingToMonument - 5){
+                DescriptionLabel.isHidden = false
+                DescriptionLabel.text = monument.title
+                break
+            }else{
+                DescriptionLabel.isHidden = true
+            }
         }
     }
 
@@ -63,7 +98,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         brng = brng * 180 / Double.pi
         brng = (brng+360).truncatingRemainder(dividingBy: 360)
-        brng = 360-brng
+//        brng = 360-brng
         
         return brng
         
