@@ -54,7 +54,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func createTrackingButton
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
