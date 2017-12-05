@@ -26,7 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var location : CLLocation!
     
     var bearingToF16: Double = 0.0
-    
+
     let buffer: Double = 5
     
     let monuments = Monument.loadAllMonuments()
@@ -34,6 +34,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
+        
         sceneView.session.run(configuration)
     }
     
@@ -52,7 +53,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
             locationManager.startUpdatingHeading()
         }
-        
+        addTapGestureToSceneView()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -144,11 +145,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         let coneNode = SCNNode()
         coneNode.geometry = cone
-        coneNode.position = SCNVector3(0, 0, (distance/2 * -1))
+        coneNode.position = SCNVector3(0, 0, (distance * -1))
         
         let scene = SCNScene()
         scene.rootNode.addChildNode(coneNode)
         sceneView.scene = scene
+    }
+    
+    func addTapGestureToSceneView() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap(withGestureRecognizer:)))
+        sceneView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func didTap(withGestureRecognizer recognizer : UIGestureRecognizer) {
+        let tapLocation = recognizer.location(in: sceneView)
+        let hitTestResults = sceneView.hitTest(tapLocation)
+        guard let node = hitTestResults.first?.node else {return}
+        node.removeFromParentNode()
     }
 
 }
