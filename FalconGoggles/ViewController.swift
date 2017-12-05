@@ -12,36 +12,39 @@ import CoreMotion
 import CoreLocation
 import UIKit
 import Foundation
+import ARKit
+import SceneKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
-    @IBOutlet weak var DescriptionLabel: UILabel!
+    @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var infoLabel: UILabel!
     
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var brngLabel: UILabel!
     
     var motionManager : CMMotionManager!
     let locationManager = CLLocationManager()
     var location : CLLocation!
     
     var bearingToF16: Double = 0.0
-    
+
     let buffer: Double = 5
     
     let monuments = Monument.loadAllMonuments()
     
-    @IBOutlet weak var myPhoneBearingLable: UILabel!
-    @IBOutlet weak var F16BearingLabel: UILabel!
-    @IBOutlet weak var F15BearingLabel: UILabel!
-    @IBOutlet weak var F105BearingLabel: UILabel!
-    @IBOutlet weak var F4BearingLabel: UILabel!
-    @IBOutlet weak var ChapelBearingLabel: UILabel!
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let configuration = ARWorldTrackingConfiguration()
+        
+        sceneView.session.run(configuration)
+    }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        sceneView.session.pause()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DescriptionLabel.isHidden = true
         motionManager = CMMotionManager()
         locationManager.requestAlwaysAuthorization()
         if CLLocationManager.locationServicesEnabled(){
@@ -50,7 +53,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
             locationManager.startUpdatingHeading()
         }
-        
+        addTapGestureToSceneView()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -62,17 +65,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let myLocation = locations.first {
-            locationLabel.text = "\(String(myLocation.coordinate.latitude)), \(String(myLocation.coordinate.longitude))"
+            
             
             location=myLocation
             
-            brngLabel.text = "\(headingToLocation(myLoc: location, monumentLoc: monuments[0].coordinate ))"
+            
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
-        DescriptionLabel.text = String(newHeading.trueHeading)
         
         for monument in monuments{
             
@@ -82,23 +84,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             let bearingToMonument = headingToLocation(myLoc: location, monumentLoc: monument.coordinate)
             
-            let testDist = monument.getDistance(userLoc: location)
-            
-            if monument.title == "F-16 Fightin' Falcon"{
-                F16BearingLabel.text = String(bearingToMonument)
-            }else if monument.title == "F-15 Eagle"{
-                F15BearingLabel.text = String(bearingToMonument)
-            }else if monument.title == "F-4 Phantom"{
-                F4BearingLabel.text = String(bearingToMonument)
-            }else if monument.title == "F-105 Thunderchief"{
-                F105BearingLabel.text = String(bearingToMonument)
-            }else{
-                ChapelBearingLabel.text = String(bearingToMonument)
-            }
             
             let myBearing = newHeading.trueHeading
             
-            myPhoneBearingLable.text = String(myBearing)
             
             if(myBearing <= bearingToMonument + 5 && myBearing >= bearingToMonument - 5){
 //                DescriptionLabel.isHidden = false
@@ -135,10 +123,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         if isThereAHit == true{
-            DescriptionLabel.isHidden = false
-            DescriptionLabel.text = theTarget!.title
-        }else{
-            DescriptionLabel.isHidden = true
+            let targetLocation = CLLocation(latitude: theTarget!.coordinate.latitude, longitude: theTarget!.coordinate.longitude)
+           addCone(topRadius: CGFloat(location.distance(from: targetLocation) / 10), bottomRadius: 0, height: CGFloat(location.distance(from: targetLocation) / 5), distance: Float(location.distance(from: targetLocation)))
+            infoLabel.text = theTarget!.theDescription
         }
         
     }
@@ -180,6 +167,37 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         return brng + (offset * posOrNeg)
         
     }
+    
+    func addCone(topRadius: CGFloat = 1, bottomRadius: CGFloat = 0, height: CGFloat = 2, distance: Float = 0.2) {
+        let cone = SCNCone(topRadius: topRadius, bottomRadius: bottomRadius, height: height)
+        
+        let coneNode = SCNNode()
+        coneNode.geometry = cone
+        coneNode.position = SCNVector3(0, 0, (distance * -1))
+        
+        let scene = SCNScene()
+        scene.rootNode.addChildNode(coneNode)
+        
+        sceneView.scene = scene
+    }
+    
+    func addTapGestureToSceneView() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap(withGestureRecognizer:)))
+        sceneView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func didTap(withGestureRecognizer recognizer : UIGestureRecognizer) {
+        let tapLocation = recognizer.location(in: sceneView)
+        let hitTestResults = sceneView.hitTest(tapLocation)
+        guard let node = hitTestResults.first?.node else {return}
+        node.removeFromParentNode()
+    }
 
+}
+extension float4x4 {
+    var translation : float3 {
+        let translation = self.columns.3
+        return float3(translation.x, translation.y, translation.z)
+    }
 }
 
