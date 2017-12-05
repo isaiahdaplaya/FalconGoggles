@@ -178,6 +178,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         let scene = SCNScene()
         scene.rootNode.addChildNode(coneNode)
+        
         sceneView.scene = scene
     }
     
