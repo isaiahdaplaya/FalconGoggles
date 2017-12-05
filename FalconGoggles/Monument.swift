@@ -37,6 +37,10 @@ class Monument: NSObject, MKAnnotation{
         return mapItem
     }
     
+    func getDistance(userLoc: CLLocation) -> CLLocationDistance {
+        return (userLoc.distance(from: CLLocation(latitude: self.coordinate.latitude, longitude: self.coordinate.longitude)))
+    }
+    
     static func loadAllMonuments() -> [Monument]{
         let f16 = Monument(title: "F-16 Fightin' Falcon", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.009103, longitude: -104.889707))
         let f15 = Monument(title: "F-15 Eagle", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.007789, longitude: -104.889707))
