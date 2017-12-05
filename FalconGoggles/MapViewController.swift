@@ -29,9 +29,20 @@ class MapViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let allMonuments = Monument.loadAllMonuments()
+        
         mapView.addAnnotations(allMonuments)
     }
+    
 
+    @IBAction func CenterButtonPressed(_ sender: Any) {
+        var mapRegion = MKCoordinateRegion()
+        mapRegion.center = mapView.userLocation.coordinate
+        mapRegion.span.latitudeDelta = 0.2
+        mapRegion.span.longitudeDelta = 0.2
+        
+        mapView.setRegion(mapRegion, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
