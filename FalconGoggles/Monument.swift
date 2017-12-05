@@ -14,13 +14,14 @@ class Monument: NSObject, MKAnnotation{
     let locationName: String
     let type: String
     let coordinate: CLLocationCoordinate2D
+    var isTargeting: Bool
     
     init(title:String, locationName: String, type: String, coordinate: CLLocationCoordinate2D){
         self.title = title
         self.locationName = locationName
         self.type = type
         self.coordinate = coordinate
-        
+        self.isTargeting = false
         super.init()
     }
     
