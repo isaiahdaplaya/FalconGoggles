@@ -5,6 +5,11 @@
 //  Created by Isaiah Butcher on 11/12/17.
 //  Copyright © 2017 Isaiah Butcher. All rights reserved.
 //
+//Author: Nicholas Maxey, Isiaih Butcher
+//Documentation: https://github.com/ProjectDent/ARKit-CoreLocation Non apple standard library/kit that uses ARKit and Corelocation to help place lcation markers
+//https://www.raywenderlich.com/160517/mapkit-tutorial-getting-started used to gain understanding of the basics of displaying maps.
+//Used a corelocation tutorial to understand how to retrieve user location data.
+
 
 import UIKit
 

@@ -129,8 +129,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             annotatedNode = LocationAnnotationNode(location: targetLocation, image: image!)
             annotatedNode!.scaleRelativeToDistance = true
-            
-            sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotatedNode!)
+        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotatedNode!)
             
             
             infoLabel.text = theTarget!.theDescription
