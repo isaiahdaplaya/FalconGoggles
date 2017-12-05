@@ -21,6 +21,32 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gse-me-0LT">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="dAM-Mi-hJg">
+                                <rect key="frame" x="315" y="543.5" width="40" height="54.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqg-uS-zJT">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="14.5"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="R6f-73-A9K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4z-Og-67h">
+                                        <rect key="frame" x="0.0" y="14.5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="RQD-TZ-vdv"/>
+                                            <constraint firstAttribute="width" constant="40" id="mtR-Wj-bEJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Center" image="arrowloclogo"/>
+                                        <connections>
+                                            <action selector="CenterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BRn-V8-XAa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -29,6 +55,8 @@
                             <constraint firstItem="Gse-me-0LT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xlo-tE-wDv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gse-me-0LT" secondAttribute="bottom" id="aFH-qw-w5f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gse-me-0LT" secondAttribute="trailing" id="fex-Ir-Wv2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dAM-Mi-hJg" secondAttribute="trailing" constant="20" id="qa1-l9-teg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dAM-Mi-hJg" secondAttribute="bottom" constant="20" id="ucv-3U-xxC"/>
                             <constraint firstItem="Gse-me-0LT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xu4-Ax-C57"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -40,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218" y="-153"/>
+            <point key="canvasLocation" x="216.80000000000001" y="-153.37331334332833"/>
         </scene>
         <!--Y Test-->
         <scene sceneID="Pa7-u0-WbR">
@@ -124,7 +152,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEq-E1-6Ef">
                                                 <rect key="frame" x="8" y="8" width="359" height="264"/>
-                                                <mutableString key="text">dafhthqrjwtjwrtjrtjwtjwrtjwrtjwtqrradvhwrthsdfyjqtrrjaqerjgjhgigfq;reuiofhaergregqwrwehwrhwvhwrthwrtwthwthwthwthwthwthwtwthwthwthwthwrthwrthwthwthwthwrthwthwthwthwthwthwthwthsvhwrthwhvhwrthwvhwrthwrthwrthwthwthwtrhwrthwrthwtrhwthwtrhwthwrthwthwthwthwthwrthwrthwthwtrhwthwthwthwtrhwthwthwtaerwerhwrthwtrhwthwthwrthwthwrthwthwrthwthwthwthwtrhwthwthtwthwtrhwrthwrthwrthwtrhwthwtrhwtrhwtrhwrthwrthwrthwtrhwrthwtrhwtrhwrthwrthwrthwthwtwhwrthwrthwrthagqergrgergergergergergergergergergaergargaergaergaergaergaergaergaerg</mutableString>
+                                                <string key="text">dafhthqrjwtjwrtjrtjwtjwrtjwrtjwtqrradvhwrthsdfyjqtrrjaqerjgjhgigfq;reuiofhaergregqwrwehwrhwvhwrthwrtwthwthwthwthwthwthwtwthwthwthwthwrthwrthwthwthwthwrthwthwthwthwthwthwthwthsvhwrthwhvhwrthwvhwrthwrthwrthwthwthwtrhwrthwrthwtrhwthwtrhwthwrthwthwthwthwthwrthwrthwthwtrhwthwthwthwtrhwthwthwtaerwerhwrthwtrhwthwthwrthwthwrthwthwrthwthwthwthwtrhwthwthtwthwtrhwrthwrthwrthwtrhwthwtrhwtrhwtrhwrthwrthwrthwtrhwrthwtrhwtrhwrthwrthwrthwthwtwhwrthwrthwrthagqergrgergergergergergergergergergaergargaergaergaergaergaergaergaerg</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -325,4 +353,7 @@
             <point key="canvasLocation" x="-641" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowloclogo" width="302" height="302"/>
+    </resources>
 </document>
