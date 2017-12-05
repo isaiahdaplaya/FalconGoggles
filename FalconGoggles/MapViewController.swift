@@ -39,6 +39,7 @@ class MapViewController: UIViewController {
     
     func changeMapType() {
         mapView.mapType = .satellite
+        mapView.showsUserLocation = true
     }
     func centerMapOnLocation(location: CLLocation){
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
