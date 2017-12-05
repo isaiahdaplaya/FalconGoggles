@@ -14,14 +14,16 @@ class Monument: NSObject, MKAnnotation{
     let locationName: String
     let type: String
     let coordinate: CLLocationCoordinate2D
+    let theDescription: String
     var isTargeting: Bool
     
-    init(title:String, locationName: String, type: String, coordinate: CLLocationCoordinate2D){
+    init(title:String, locationName: String, type: String, coordinate: CLLocationCoordinate2D, theDescription: String){
         self.title = title
         self.locationName = locationName
         self.type = type
         self.coordinate = coordinate
         self.isTargeting = false
+        self.theDescription = theDescription
         super.init()
     }
     
@@ -42,11 +44,11 @@ class Monument: NSObject, MKAnnotation{
     }
     
     static func loadAllMonuments() -> [Monument]{
-        let f16 = Monument(title: "F-16 Fightin' Falcon", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.009103, longitude: -104.889707))
-        let f15 = Monument(title: "F-15 Eagle", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.007789, longitude: -104.889707))
-        let f4 = Monument(title: "F-4 Phantom", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.007789, longitude: -104.887727))
-        let f105 = Monument(title: "F-105 Thunderchief", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.009103, longitude: -104.887727))
-        let chapel = Monument(title: "Cadet Chapel", locationName: "Visitor's Area", type: "Chapel", coordinate: CLLocationCoordinate2D(latitude: 39.008426, longitude: -104.890388))
+        let f16 = Monument(title: "F-16 Fightin' Falcon", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.009103, longitude: -104.889707), theDescription: "F16 This is a bullshit description until we can go get our contrails and get the real thing. Eat my ass.")
+        let f15 = Monument(title: "F-15 Eagle", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.007789, longitude: -104.889707), theDescription: "F15 This is a bullshit description until we can go get our contrails and get the real thing. Eat my ass.")
+        let f4 = Monument(title: "F-4 Phantom", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.007789, longitude: -104.887727), theDescription: "F4 This is a bullshit description until we can go get our contrails and get the real thing. Eat my ass.")
+        let f105 = Monument(title: "F-105 Thunderchief", locationName: "TZO", type: "Plane", coordinate: CLLocationCoordinate2D(latitude: 39.009103, longitude: -104.887727), theDescription: "F105 This is a bullshit description until we can go get our contrails and get the real thing. Eat my ass.")
+        let chapel = Monument(title: "Cadet Chapel", locationName: "Visitor's Area", type: "Chapel", coordinate: CLLocationCoordinate2D(latitude: 39.008426, longitude: -104.890388), theDescription: "Chapel This is a bullshit description until we can go get our contrails and get the real thing. Eat my ass.")
         return [f16,f15,f4,f105,chapel]
     }
 }
