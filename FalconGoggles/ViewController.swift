@@ -53,6 +53,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    func createTrackingButton
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -81,6 +83,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             let bearingToMonument = headingToLocation(myLoc: location, monumentLoc: monument.coordinate)
             
+            let testDist = monument.getDistance(userLoc: location)
+            
             if monument.title == "F-16 Fightin' Falcon"{
                 F16BearingLabel.text = String(bearingToMonument)
             }else if monument.title == "F-15 Eagle"{
@@ -97,8 +101,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             myPhoneBearingLable.text = String(myBearing)
             
-            print(newHeading.trueHeading)
-            
             if(myBearing <= bearingToMonument + 5 && myBearing >= bearingToMonument - 5){
 //                DescriptionLabel.isHidden = false
 //                DescriptionLabel.text = monument.title
@@ -109,14 +111,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //                DescriptionLabel.isHidden = true
                 monument.isTargeting = false
             }
+            
+            print((locationManager.location?.distance(from: CLLocation(latitude: monument.coordinate.latitude, longitude: monument.coordinate.longitude)))!)
         }
         
         var isThereAHit = false
         var theTarget: Monument?
+        var myMonuments: [Monument] = []
+        var minDist = 100000000000.0
         
         for monument in monuments{
             if monument.isTargeting == true{
                 isThereAHit = true
+                myMonuments.append(monument)
+
+            }
+        }
+        
+        for monument in myMonuments{
+            if monument.getDistance(userLoc: location) < minDist{
+                minDist = monument.getDistance(userLoc: location)
                 theTarget = monument
             }
         }
@@ -133,7 +147,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     
     func headingToLocation(myLoc: CLLocation, monumentLoc: CLLocationCoordinate2D)-> Double{
-        let offset = 0.0
+        var offset = 0.0
+        var posOrNeg = 0.0
         
         let dLon = monumentLoc.longitude - myLoc.coordinate.longitude
         
@@ -146,7 +161,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         brng = (brng+360).truncatingRemainder(dividingBy: 360)
 //        brng = 360-brng
         
-        return brng + offset
+        let testOffestBrng = (brng).truncatingRemainder(dividingBy: 90)
+        
+        if (brng > 90 && brng < 180) || (brng > 270 && brng < 360){
+            posOrNeg = -1.0
+        }else{
+            posOrNeg = 1.0
+        }
+        if testOffestBrng > 80 || testOffestBrng < 10 {
+            offset = 0.0
+        }else if (testOffestBrng <= 80 && testOffestBrng > 60) || (testOffestBrng >= 10 && testOffestBrng <= 30){
+            offset = 15.0
+        }else if (testOffestBrng <= 60 && testOffestBrng > 50) || (testOffestBrng >= 30 && testOffestBrng <= 40){
+            offset = 30.0
+        }else{
+            offset = 40.0
+        }
+        
+        return brng + (offset * posOrNeg)
         
     }
 
