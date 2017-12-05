@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FwK-aP-nnb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FwK-aP-nnb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -98,21 +98,41 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOw-FD-ZKX">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Initializing AR session." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0o-Eh-bNA">
-                                <rect key="frame" x="16" y="580" width="169" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="ndl-M8-RNV"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="tlM-E1-c1Y"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJ0-IY-lMg">
+                                <rect key="frame" x="16" y="565.5" width="343" height="36.5"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XSn-ff-Dda">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="36.5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing AR session." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHp-VS-Pfv">
+                                            <rect key="frame" x="8" y="8" width="321" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GHp-VS-Pfv" firstAttribute="top" secondItem="XSn-ff-Dda" secondAttribute="top" constant="8" id="5NF-b2-DRu"/>
+                                        <constraint firstAttribute="trailing" secondItem="GHp-VS-Pfv" secondAttribute="trailing" constant="14" id="H92-TC-DbB"/>
+                                        <constraint firstAttribute="bottom" secondItem="GHp-VS-Pfv" secondAttribute="bottom" constant="8" id="XEt-e2-Dr7"/>
+                                        <constraint firstItem="GHp-VS-Pfv" firstAttribute="leading" secondItem="XSn-ff-Dda" secondAttribute="leading" constant="8" id="vNh-Ng-po2"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tJ0-IY-lMg" firstAttribute="leading" secondItem="WRP-r5-Xa3" secondAttribute="leading" constant="16" id="0ZC-i3-ssd"/>
                             <constraint firstItem="WRP-r5-Xa3" firstAttribute="bottom" secondItem="nOw-FD-ZKX" secondAttribute="bottom" id="6Da-FU-0CC"/>
+                            <constraint firstItem="WRP-r5-Xa3" firstAttribute="trailing" secondItem="tJ0-IY-lMg" secondAttribute="trailing" constant="16" id="KX7-fq-aRx"/>
                             <constraint firstItem="nOw-FD-ZKX" firstAttribute="leading" secondItem="WRP-r5-Xa3" secondAttribute="leading" id="LQS-TD-7UL"/>
+                            <constraint firstItem="WRP-r5-Xa3" firstAttribute="bottom" secondItem="tJ0-IY-lMg" secondAttribute="bottom" constant="16" id="aj6-OV-ykJ"/>
                             <constraint firstItem="WRP-r5-Xa3" firstAttribute="trailing" secondItem="nOw-FD-ZKX" secondAttribute="trailing" id="oBu-K4-59V"/>
                             <constraint firstItem="nOw-FD-ZKX" firstAttribute="top" secondItem="WRP-r5-Xa3" secondAttribute="top" id="yAg-2g-8Wt"/>
                         </constraints>
@@ -121,7 +141,7 @@
                     <tabBarItem key="tabBarItem" title="Goggles" id="0YY-q0-VOd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="infoLabel" destination="v0o-Eh-bNA" id="sqB-cF-xjr"/>
+                        <outlet property="infoLabel" destination="GHp-VS-Pfv" id="8ry-MX-3My"/>
                         <outlet property="sceneView" destination="nOw-FD-ZKX" id="IsE-fX-jjP"/>
                     </connections>
                 </viewController>

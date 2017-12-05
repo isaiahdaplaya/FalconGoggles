@@ -125,8 +125,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if isThereAHit == true{
             let targetLocation = CLLocation(latitude: theTarget!.coordinate.latitude, longitude: theTarget!.coordinate.longitude)
            addCone(topRadius: CGFloat(location.distance(from: targetLocation) / 10), bottomRadius: 0, height: CGFloat(location.distance(from: targetLocation) / 5), distance: Float(location.distance(from: targetLocation)))
-        }else{
-           
+            infoLabel.text = theTarget!.theDescription
         }
         
     }
